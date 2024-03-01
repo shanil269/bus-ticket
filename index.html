@@ -15,10 +15,52 @@
     <!-- daisy UI and tailwind cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- daisy ui theme setting -->
+    <html data-theme="light">
+
+    </html>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        green_common: '#1DD100',
+                        green_bg_with_opacity: '#1DD10033',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
-<body>
-
+<body class="container mx-auto raleway-fonts">
+    <header>
+        <!-- navigation bar starts -->
+        <nav>
+            <div class="navbar">
+                <div class="navbar-start">
+                    <a class="text-xl font-extrabold text-black">P-Ticket</a>
+                </div>
+                <div class="navbar-center hidden lg:flex ">
+                    <ul class="menu menu-horizontal px-1 ">
+                        <li class="hover:text-green_common text-gray-400"><a>Home</a></li>
+                        <li class="hover:text-green_common text-gray-400">
+                            <a>About</a>
+                        </li>
+                        <li class="hover:text-green_common text-gray-400"><a>Destination</a></li>
+                        <li class="hover:text-green_common text-gray-400"><a>Search</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <a class="btn bg-green_bg_with_opacity border-green_common text-green_common space-x-2">
+                        <span>Bus</span>
+                        <span><img src="images/bus-icon.png" alt="bus-icon"></span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <!-- navigation bar ends -->
+    </header>
     <script src="js/bus.js"></script>
 </body>
 
