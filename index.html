@@ -69,7 +69,8 @@
                             Paribahan</span></h1>
                     <p class="mb-5">P Paribahan offers seamless end-to-end travel solutions, ensuring convenience and
                         reliability for passengers.</p>
-                    <button class="btn bg-green_common border-none rounded-lg text-black p-4">Buy Tickets</button>
+                    <button class="btn bg-green_common border-none rounded-lg text-black p-4"
+                        onclick="goToBuyTicketSection('buy-ticket-section')">Buy Tickets</button>
                 </div>
             </div>
         </div>
@@ -108,7 +109,7 @@
         </section>
 
         <!-- P.H Paribahan section -->
-        <section class="bg-[#F7F8F8] rounded-t-[72px] border-t-2 border-green_common mt-20 ">
+        <section id="buy-ticket-section" class="bg-[#F7F8F8] rounded-t-[72px] border-t-2 border-green_common mt-20 ">
             <div class="container mx-auto">
                 <!-- section heading -->
                 <div class="flex flex-col justify-center items-center mt-12 mb-12">
@@ -161,6 +162,76 @@
                             <p class="text-xl font-medium opacity-50">Per Seat</p>
                         </div>
                     </div>
+                </div>
+
+                <!-- Select Your Seat -->
+                <div class="grid grid-cols-2 mt-12 rounded-3xl p-10 divide-x divide-dashed divide-[#0307124D] bg-white">
+                    <div class="flex flex-col divide-y divide-dashed divide-[#0307124D] p-5">
+                        <h3 class="pb-4">Select Your Seat</h3>
+                        <div class="flex justify-between pt-4 pb-4">
+                            <div class="flex space-x-3">
+                                <img src="images/seat-gray.png" alt="">
+                                <p>Available</p>
+                            </div>
+                            <div class="flex space-x-3">
+                                <img src="images/seat-green-filled.png" alt="">
+                                <p>Selected</p>
+                            </div>
+                        </div>
+                        <!-- seat selection -->
+                        <div class="flex flex-col pt-4 pb-4">
+                            <div class="flex justify-end">
+                                <img class="px-6 py-1 rounded-xl bg-gray-300" src="images/wheel.svg" alt="">
+                            </div>
+                            <div class="grid grid-cols-2 gap-14 mt-6">
+                                <div class="grid grid-cols-2 gap-6">
+                                    <p id="A1" class="seat">A1</p>
+                                    <p id="A2" class="seat">A2</p>
+                                    <p id="B1" class="seat">B1</p>
+                                    <p id="B1" class="seat">B1</p>
+                                    <p id="C1" class="seat">C1</p>
+                                    <p id="C2" class="seat">C2</p>
+                                    <p id="D1" class="seat">D1</p>
+                                    <p id="D2" class="seat">D2</p>
+                                    <p id="E1" class="seat">E1</p>
+                                    <p id="E2" class="seat">E2</p>
+                                    <p id="F1" class="seat">F1</p>
+                                    <p id="F2" class="seat">F2</p>
+                                    <p id="G1" class="seat">G1</p>
+                                    <p id="G2" class="seat">G2</p>
+                                    <p id="H1" class="seat">H1</p>
+                                    <p id="H2" class="seat">H2</p>
+                                    <p id="I1" class="seat">I1</p>
+                                    <p id="I2" class="seat">I2</p>
+                                    <p id="J1" class="seat">J1</p>
+                                    <p id="J2" class="seat">J2</p>
+                                </div>
+                                <div class="grid grid-cols-2 gap-6">
+                                    <p id="A3" class="seat">A3</p>
+                                    <p id="A4" class="seat">A4</p>
+                                    <p id="B3" class="seat">B3</p>
+                                    <p id="B4" class="seat">B4</p>
+                                    <p id="C3" class="seat">C3</p>
+                                    <p id="C4" class="seat">C4</p>
+                                    <p id="D3" class="seat">D3</p>
+                                    <p id="D4" class="seat">D4</p>
+                                    <p id="E3" class="seat">E3</p>
+                                    <p id="E4" class="seat">E4</p>
+                                    <p id="F3" class="seat">F3</p>
+                                    <p id="F4" class="seat">F4</p>
+                                    <p id="G3" class="seat">G3</p>
+                                    <p id="G4" class="seat">G4</p>
+                                    <p id="H3" class="seat">H3</p>
+                                    <p id="H4" class="seat">H4</p>
+                                    <p id="I3" class="seat">I3</p>
+                                    <p id="I4" class="seat">I4</p>
+                                    <p id="J3" class="seat">J3</p>
+                                    <p id="J4" class="seat">J4</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>right column</div>
                 </div>
             </div>
         </section>
