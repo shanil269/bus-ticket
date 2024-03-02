@@ -135,7 +135,7 @@
                                 </div>
                                 <div class="flex p-3 space-x-2 justify-center items-center bg-[#1DD10026] rounded-xl">
                                     <img src="images/seat-green.png" alt="">
-                                    <p><span>40</span> Seats left</p>
+                                    <p><span id="seatLeft">40</span> Seats left</p>
                                 </div>
                             </div>
                             <div
@@ -167,6 +167,7 @@
                 <!-- Select Your Seat -->
                 <div class="grid grid-cols-2 mt-12 rounded-3xl p-10 divide-x divide-dashed divide-[#0307124D] bg-white">
                     <div class="flex flex-col divide-y divide-dashed divide-[#0307124D] p-5">
+                        <!-- left side -->
                         <h3 class="pb-4">Select Your Seat</h3>
                         <div class="flex justify-between pt-4 pb-4">
                             <div class="flex space-x-3">
@@ -185,53 +186,115 @@
                             </div>
                             <div class="grid grid-cols-2 gap-14 mt-6">
                                 <div class="grid grid-cols-2 gap-6">
-                                    <p id="A1" class="seat">A1</p>
-                                    <p id="A2" class="seat">A2</p>
-                                    <p id="B1" class="seat">B1</p>
-                                    <p id="B1" class="seat">B1</p>
-                                    <p id="C1" class="seat">C1</p>
-                                    <p id="C2" class="seat">C2</p>
-                                    <p id="D1" class="seat">D1</p>
-                                    <p id="D2" class="seat">D2</p>
-                                    <p id="E1" class="seat">E1</p>
-                                    <p id="E2" class="seat">E2</p>
-                                    <p id="F1" class="seat">F1</p>
-                                    <p id="F2" class="seat">F2</p>
-                                    <p id="G1" class="seat">G1</p>
-                                    <p id="G2" class="seat">G2</p>
-                                    <p id="H1" class="seat">H1</p>
-                                    <p id="H2" class="seat">H2</p>
-                                    <p id="I1" class="seat">I1</p>
-                                    <p id="I2" class="seat">I2</p>
-                                    <p id="J1" class="seat">J1</p>
-                                    <p id="J2" class="seat">J2</p>
+                                    <p onclick="selectSeat('A1')" id="A1" class="seat">A1</p>
+                                    <p onclick="selectSeat('A2')" id="A2" class="seat">A2</p>
+                                    <p onclick="selectSeat('B1')" id="B1" class="seat">B1</p>
+                                    <p onclick="selectSeat('B2')" id="B2" class="seat">B2</p>
+                                    <p onclick="selectSeat('C1')" id="C1" class="seat">C1</p>
+                                    <p onclick="selectSeat('C2')" id="C2" class="seat">C2</p>
+                                    <p onclick="selectSeat('D1')" id="D1" class="seat">D1</p>
+                                    <p onclick="selectSeat('D2')" id="D2" class="seat">D2</p>
+                                    <p onclick="selectSeat('E1')" id="E1" class="seat">E1</p>
+                                    <p onclick="selectSeat('E2')" id="E2" class="seat">E2</p>
+                                    <p onclick="selectSeat('F1')" id="F1" class="seat">F1</p>
+                                    <p onclick="selectSeat('F2')" id="F2" class="seat">F2</p>
+                                    <p onclick="selectSeat('G1')" id="G1" class="seat">G1</p>
+                                    <p onclick="selectSeat('G2')" id="G2" class="seat">G2</p>
+                                    <p onclick="selectSeat('H1')" id="H1" class="seat">H1</p>
+                                    <p onclick="selectSeat('H2')" id="H2" class="seat">H2</p>
+                                    <p onclick="selectSeat('I1')" id="I1" class="seat">I1</p>
+                                    <p onclick="selectSeat('I2')" id="I2" class="seat">I2</p>
+                                    <p onclick="selectSeat('J1')" id="J1" class="seat">J1</p>
+                                    <p onclick="selectSeat('J2')" id="J2" class="seat">J2</p>
                                 </div>
                                 <div class="grid grid-cols-2 gap-6">
-                                    <p id="A3" class="seat">A3</p>
-                                    <p id="A4" class="seat">A4</p>
-                                    <p id="B3" class="seat">B3</p>
-                                    <p id="B4" class="seat">B4</p>
-                                    <p id="C3" class="seat">C3</p>
-                                    <p id="C4" class="seat">C4</p>
-                                    <p id="D3" class="seat">D3</p>
-                                    <p id="D4" class="seat">D4</p>
-                                    <p id="E3" class="seat">E3</p>
-                                    <p id="E4" class="seat">E4</p>
-                                    <p id="F3" class="seat">F3</p>
-                                    <p id="F4" class="seat">F4</p>
-                                    <p id="G3" class="seat">G3</p>
-                                    <p id="G4" class="seat">G4</p>
-                                    <p id="H3" class="seat">H3</p>
-                                    <p id="H4" class="seat">H4</p>
-                                    <p id="I3" class="seat">I3</p>
-                                    <p id="I4" class="seat">I4</p>
-                                    <p id="J3" class="seat">J3</p>
-                                    <p id="J4" class="seat">J4</p>
+                                    <p onclick="selectSeat('A3')" id="A3" class="seat">A3</p>
+                                    <p onclick="selectSeat('A4')" id="A4" class="seat">A4</p>
+                                    <p onclick="selectSeat('B3')" id="B3" class="seat">B3</p>
+                                    <p onclick="selectSeat('B4')" id="B4" class="seat">B4</p>
+                                    <p onclick="selectSeat('C3')" id="C3" class="seat">C3</p>
+                                    <p onclick="selectSeat('C4')" id="C4" class="seat">C4</p>
+                                    <p onclick="selectSeat('D3')" id="D3" class="seat">D3</p>
+                                    <p onclick="selectSeat('D4')" id="D4" class="seat">D4</p>
+                                    <p onclick="selectSeat('E3')" id="E3" class="seat">E3</p>
+                                    <p onclick="selectSeat('E4')" id="E4" class="seat">E4</p>
+                                    <p onclick="selectSeat('F3')" id="F3" class="seat">F3</p>
+                                    <p onclick="selectSeat('F4')" id="F4" class="seat">F4</p>
+                                    <p onclick="selectSeat('G3')" id="G3" class="seat">G3</p>
+                                    <p onclick="selectSeat('G4')" id="G4" class="seat">G4</p>
+                                    <p onclick="selectSeat('H3')" id="H3" class="seat">H3</p>
+                                    <p onclick="selectSeat('H4')" id="H4" class="seat">H4</p>
+                                    <p onclick="selectSeat('I3')" id="I3" class="seat">I3</p>
+                                    <p onclick="selectSeat('I4')" id="I4" class="seat">I4</p>
+                                    <p onclick="selectSeat('J3')" id="J3" class="seat">J3</p>
+                                    <p onclick="selectSeat('J4')" id="J4" class="seat">J4</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div>right column</div>
+                    <!-- right side -->
+                    <div class="flex flex-col p-5">
+                        <h3 class="pb-4">Select Your Seat</h3>
+                        <div class="overflow-x-auto">
+                            <table class="table">
+                                <!-- head -->
+                                <thead>
+                                    <tr>
+                                        <th>Seat <span id="seatCount" class="px-2 text-white rounded">0</span></th>
+                                        <th>Class</th>
+                                        <th>Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="seat-info">
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="flex justify-between mt-3">
+                            <p>Total Price:</p>
+                            <div class="flex">
+                                <span class="pe-1">BDT </span>
+                                <p id="total-price">0</p>
+                            </div>
+
+                        </div>
+                        <label class="input input-bordered flex items-center gap-2 mt-3">
+                            <input id="discount-code" type="text" class="grow" placeholder="Have any copupon?" />
+                            <button onclick="discountAmount('discount-code')" id="apply-btn"
+                                class="btn bg-green_common text-white px-6 py-1" disabled="disabled">Apply</button>
+                        </label>
+                        <div id="discount-div" class="flex justify-between mt-3 lg:hidden">
+                            <p>Discount</p>
+                            <div class="flex">
+                                <span class="pe-1">BDT </span>
+                                <p id="discount-amount">0</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-between mt-3">
+                            <p>Grand Total</p>
+                            <div class="flex">
+                                <span class="pe-1">BDT </span>
+                                <p id="grand-total">0</p>
+                            </div>
+                        </div>
+                        <label class="form-control w-full max-w-xs">
+                            <div class="label">
+                                <span class="label-text">Passenger Name*</span>
+                            </div>
+                            <input type="text" placeholder="Enter your name"
+                                class="input input-bordered w-full max-w-xs" />
+                            <div class="label">
+                                <span class="label-text">Phone Number*</span>
+                            </div>
+                            <input type="number" placeholder="Enter your number"
+                                class="input input-bordered w-full max-w-xs" />
+                            <div class="label">
+                                <span class="label-text">Email ID</span>
+                            </div>
+                            <input type="email" placeholder="Enter your email address"
+                                class="input input-bordered w-full max-w-xs" />
+                        </label>
+                        <button class="btn bg-green_common text-white px-6 py-1">Next</button>
+                    </div>
                 </div>
             </div>
         </section>
