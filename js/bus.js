@@ -112,6 +112,7 @@ function setTotalPrice(totalPrice, validation) {
     else {
         let newPrice = parseInt(tPrice.innerText) - 550;
         tPrice.innerText = newPrice;
+
     }
 }
 
@@ -119,6 +120,9 @@ function setGrandTotal(grandTotal) {
     let gTotal = document.getElementById(grandTotal);
     let totalPrice = document.getElementById('total-price');
     gTotal.innerText = totalPrice.innerText;
+    if (currentSelection != 4) {
+        document.getElementById('discount-div').style.display = 'none';
+    }
 }
 
 function activateApplyBtn(buttonId, validation) {
@@ -139,11 +143,34 @@ function discountAmount(code) {
         let discount = parseFloat(totalPrice.innerText) * .15;
         document.getElementById('discount-amount').textContent = discount;
         document.getElementById('discount-div').style.display = 'flex';
+        setGrandTotalAfterDiscount(discount);
 
     }
     else if (discountCode === 'Couple20') {
         let discount = parseFloat(totalPrice.innerText) * .20;
         document.getElementById('discount-amount').textContent = discount;
-        document.getElementById('discount-div').style.display = 'block';
+        document.getElementById('discount-div').style.display = 'flex';
+        setGrandTotalAfterDiscount(discount);
     }
+}
+
+function setGrandTotalAfterDiscount(discount) {
+    let gTotal = document.getElementById('grand-total');
+    let afterDiscount = parseInt(gTotal.innerText) - discount;
+    gTotal.innerText = afterDiscount;
+}
+
+const mobileNumberInput = document.getElementById('mobile-number');
+const nextButton = document.getElementById('next-btn');
+mobileNumberInput.addEventListener('input', function () {
+    if ((mobileNumberInput.value) && ((currentSelection >= 1) && (currentSelection <= 4))) {
+        console.log(currentSelection)
+        nextButton.disabled = false;
+    } else {
+        nextButton.disabled = true;
+    }
+});
+
+function openSuccessModal() {
+
 }

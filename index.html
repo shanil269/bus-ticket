@@ -278,14 +278,14 @@
                         </div>
                         <label class="form-control w-full max-w-xs">
                             <div class="label">
-                                <span class="label-text">Passenger Name*</span>
+                                <span class="label-text">Passenger Name</span>
                             </div>
                             <input type="text" placeholder="Enter your name"
                                 class="input input-bordered w-full max-w-xs" />
                             <div class="label">
                                 <span class="label-text">Phone Number*</span>
                             </div>
-                            <input type="number" placeholder="Enter your number"
+                            <input id="mobile-number" type="number" placeholder="Enter your number"
                                 class="input input-bordered w-full max-w-xs" />
                             <div class="label">
                                 <span class="label-text">Email ID</span>
@@ -293,11 +293,27 @@
                             <input type="email" placeholder="Enter your email address"
                                 class="input input-bordered w-full max-w-xs" />
                         </label>
-                        <button class="btn bg-green_common text-white px-6 py-1">Next</button>
+                        <button onclick="my_modal_5.showModal()" id="next-btn"
+                            class="btn bg-green_common text-white px-6 py-1" disabled="disabled">Next</button>
                     </div>
                 </div>
             </div>
         </section>
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box flex flex-col justify-center items-center">
+                <img src="images/success.png" alt="">
+                <h3 class="font-bold text-lg text-green_common">SUCCESS!</h3>
+                <p class="py-4">Thank you for Booking Our Bus Seats.
+                    We are working hard to find the best service and deals for you.
+                    Shortly you will find a confirmation in your email.</p>
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn bg-green_common rounded-xl">Continue</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
     </main>
     <script src="js/bus.js"></script>
 </body>
